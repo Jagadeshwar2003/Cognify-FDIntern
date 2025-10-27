@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cognifyz — Beautiful Front-end Experiences</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-glass fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <span class="brand-dot me-2"></span><span class="brand-text">Cognifyz</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#users">Users</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-2"><button id="themeBtn" class="btn btn-sm btn-outline-primary">Light Theme</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero d-flex align-items-center" id="home">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold hero-title">Build beautiful front-end experiences</h1>
+          <p class="lead hero-sub">A complete front-end demo showing HTML, Bootstrap, SASS, JS interactivity, API integration and form validation — with polished UI patterns.</p>
+          <div class="d-flex gap-2">
+            <a href="#users" class="btn btn-primary btn-lg">See Users</a>
+            <a href="#contact" class="btn btn-outline-secondary btn-lg">Contact Us</a>
+          </div>
+          <div class="mt-4">
+            <small class="text-muted">Trusted by developers &amp; small teams</small>
+            <div class="d-inline-block ms-3 partners">
+              <img src="Banner.jpg" alt="Partner Logo" class="partner-thumb" />
+              <img src="Banner.jpg" alt="Partner Logo" class="partner-thumb ms-2" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="hero-image" role="img" aria-label="developer workspace"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-7">
+          <h2>About the Project</h2>
+          <p class="lead">This project demonstrates front-end development skills — responsive layout, component design, light animations, and API-driven content.</p>
+          <ul class="mb-0 text-muted">
+            <li>Bootstrap-based responsive layout</li>
+            <li>Dynamic user cards using RandomUser API</li>
+            <li>Client-side form validation and feedback</li>
+            <li>Theme switching &amp; small UX animations (Now implemented!)</li>
+          </ul>
+        </div>
+        <div class="col-md-5 text-center">
+          <img src="Banner.jpg" alt="Banner" class="img-fluid rounded shadow-sm"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Features</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="icon-circle mb-3"><i class="fa-solid fa-layer-group fa-lg"></i></div>
+            <h5>Component-first UI</h5>
+            <p class="text-muted mb-0">Reusable, responsive components for fast prototyping and consistent UI across pages.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="icon-circle mb-3"><i class="fa-solid fa-server fa-lg"></i></div>
+            <h5>API Driven Data</h5>
+            <p class="text-muted mb-0">Live data powering user lists and dynamic content (can be swapped for your API).</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="icon-circle mb-3"><i class="fa-solid fa-magic fa-lg"></i></div>
+            <h5>Polished Interactions</h5>
+            <p class="text-muted mb-0">Micro-interactions, focus states, and accessible forms for a professional feel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="users" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Users</h2>
+      <div id="userData" class="row g-4 justify-content-center">
+        <p class="text-center text-muted">Loading user data...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">What people say</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="test-card p-4 h-100">
+            <p class="mb-3">“Cognifyz has sped up our front-end work. Great UI patterns and easy to adapt.”</p>
+            <div class="d-flex align-items-center">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3" width="48" alt="Priya R.">
+              <div>
+                <strong>Priya R.</strong><br><small class="text-muted">Frontend Engineer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="test-card p-4 h-100">
+            <p class="mb-3">“The theme switch and components saved us days of styling — highly recommended.”</p>
+            <div class="d-flex align-items-center">
+              <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle me-3" width="48" alt="Arjun K.">
+              <div>
+                <strong>Arjun K.</strong><br><small class="text-muted">Product Designer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="test-card p-4 h-100">
+            <p class="mb-3">“Nice visuals and accessible form handling — exactly what clients expect.”</p>
+            <div class="d-flex align-items-center">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="48" alt="Sara L.">
+              <div>
+                <strong>Sara L.</strong><br><small class="text-muted">Founder</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">FAQ</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Can I use this for my project?</button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Yes — this layout is a starting template and can be adapted to real projects easily.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">How do I change the theme?</button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Click the Theme button in the navbar — the choice is saved to your browser using local storage, providing a persistent user experience.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">Can I host this?</button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body text-muted">Yes — upload files to any static host (Netlify, Vercel, GitHub Pages) and it will work immediately.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 cta">
+    <div class="container text-center">
+      <h3 class="mb-3">Ready to ship polished front-ends?</h3>
+      <a href="#contact" class="btn btn-xl btn-light">Get Started</a>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-3">Contact Us</h2>
+      <form id="contactForm" class="mx-auto p-4 rounded shadow-sm" style="max-width:720px;">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" type="email" class="form-control" required />
+          </div>
+          <div class="col-12">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" rows="5" class="form-control" required></textarea>
+          </div>
+
+          <div class="col-12 d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+          </div>
+
+          <div class="col-12">
+            <p id="formMsg" class="mb-0 fw-semibold"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-4 text-center text-muted">
+    <div class="container">
+      <small>© <span id="year"></span> Cognifyz — Built for learning.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

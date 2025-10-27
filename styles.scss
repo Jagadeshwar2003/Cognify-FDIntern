@@ -1,0 +1,83 @@
+// -------------------
+// Variables
+// -------------------
+$font-stack: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+
+// SCSS Variables for card effects (Used to calculate card hover styles)
+$shadow-dark: rgba(2, 6, 23, 0.6);
+$shadow-light: rgba(0, 0, 0, 0.15);
+$border-dark: rgba(255, 255, 255, 0.03);
+$border-light: rgba(0, 0, 0, 0.1);
+
+// Accent Colors (Mirroring CSS variables)
+$accent1: #6c63ff;
+$accent2: #00d4ff;
+
+// -------------------
+// Mixins
+// -------------------
+@mixin transition($time: 0.2s) {
+  transition: transform $time ease, box-shadow $time ease, border $time ease;
+}
+
+// -------------------
+// Global Reset & Base (SCSS implementation)
+// -------------------
+// We rely on styles.css for the main theme variables, but use SCSS for nesting.
+
+// -------------------
+// Custom Components (SCSS implementation)
+// -------------------
+.feature-card, .user-card {
+  border-radius: 12px;
+  padding: 18px;
+  @include transition(0.18s);
+  
+  // Nesting hover styles is cleaner in SCSS
+  &:hover {
+    transform: translateY(-6px);
+    // Box shadow changes based on mode
+    box-shadow: 0 12px 30px $shadow-dark;
+  }
+}
+
+// User Card Specific Styling
+.user-card {
+    // Nested styles for the image within the card
+    img {
+        width: 84px;
+        height: 84px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+// Light Mode Overrides (Using the .light-mode class)
+:root.light-mode {
+    .feature-card, .user-card {
+        // SCSS conditional variable usage
+        &:hover {
+            box-shadow: 0 12px 30px $shadow-light;
+        }
+    }
+    .user-card {
+        img {
+            border: 1px solid $border-light;
+        }
+    }
+}
+
+// Features Card Icon Circle Gradient
+.icon-circle {
+  background: linear-gradient(90deg, $accent1, $accent2);
+}
+
+// CTA Gradient (SCSS implementation)
+.cta {
+  background: linear-gradient(90deg, $accent1, $accent2);
+}
+
+// Footer Styling
+footer {
+  font-size: 0.9rem;
+}
